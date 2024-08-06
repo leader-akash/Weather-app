@@ -32,7 +32,7 @@ const App = () => {
     const fetchWeather = async () => {
       if (!selectedCity) return;
       setIsWeatherLoading(true);
-      const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${selectedCity}&appid=5c42e4061773049454107753a3e2ddc2`)
+      const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${selectedCity}&units=metric&appid=5c42e4061773049454107753a3e2ddc2`)
       try {
         
         setWeather(response.data);
@@ -61,7 +61,7 @@ const App = () => {
               setWeather(null);
             }}
           >
-            <option value="">Select a country</option>
+            {!selectedCountry && <option value="">Select a country</option>}
             {data?.map((country) => (
               <option key={country.name} value={country.name}>
                 {country.name}
@@ -81,7 +81,7 @@ const App = () => {
             }}
             disabled={!selectedCountry}
           >
-            <option value="">Select a city</option>
+            {!selectedCity && <option value="">Select a city</option>}
             {filteredCities?.cities?.map((city) => {
               return (
                 <option key={city.name} value={city?.name}>
