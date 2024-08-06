@@ -1,8 +1,8 @@
+# ⛅ Weather App
 <div align="center">
 <img src="./public/img/weather-img.png" alt="weather app ss" width="500px" />
 </div>
 
-# ⛅ Weather App
 
 ## ✨ Live Demonstration
 
