@@ -16,3 +16,9 @@ npm install
 
 yarn add
 ```
+
+- start the server
+
+```
+npm start
+```
